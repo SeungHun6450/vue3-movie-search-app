@@ -1,11 +1,12 @@
-$color--black: #000;
-$color--white: #fff;
+// Default variable overrides
+$primary: #FDC000;
 
-body {
-  background-color: $color--black;
-  h1 {
-    color: $color--white;
-    font-size: 40px;
-    display: flex;
-  }
-}
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/_maps";
+@import "../../node_modules/bootstrap/scss/_mixins";
+@import "../../node_modules/bootstrap/scss/_root";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
