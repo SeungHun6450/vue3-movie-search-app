@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App'
-import router from './routes/index.js'
+// 폴더 안의 index라는 이름의 파일을 찾아서 우선 적용하기 때문에 생략 가능
+import router from './routes'
+import store from './store'
 
 createApp(App)
   .use(router)
+  .use(store)
   .mount('#app')
