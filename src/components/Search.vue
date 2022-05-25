@@ -103,5 +103,23 @@ export default {
     // 감소하지 않게 0 선언
     flex-shrink: 0;
   }
+
+  @include media-breakpoint-down(lg){
+    display: block;
+    input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .selects {
+      margin-right: 0;
+      margin-bottom: 10px;
+      select {
+        width: 100%;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
 }
 </style>
