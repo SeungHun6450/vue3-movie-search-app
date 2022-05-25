@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const Dotenv = require('dotenv-webpack')
 
 // export
 module.exports = {
@@ -69,13 +70,20 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'static' }
+        { 
+          from: 'static',
+          noErrorOnMissing: true 
+        }
       ]
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new Dotenv()
   ],
 
+  // 개발 서버 옵션
   devServer: {
-    host: 'localhost'
+    host: 'localhost',
+    port: 8079,
+    hot: true
   }
 }
